@@ -38,7 +38,7 @@ def run_spark_job(spark):
         .option("kafka.bootstrap.servers", "localhost:9092") \
         .option("subscribe", "org-sf-police-department-service-calls") \
         .option("startingOffsets", "earliest") \
-        .option("maxOffsetsPerTrigger", 2000) \
+        .option("maxOffsetsPerTrigger", 8000) \
         .option("stopGracefullyOnShutdown", "true") \
         .load()
 
