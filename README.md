@@ -19,4 +19,4 @@ CPU - 2.2 GHz
 
 ## Output
 
-With above configurations, application could able to process microbatch of **8000* records optimally.
+With above configurations, application could able to process microbatch of **8000** records optimally.
