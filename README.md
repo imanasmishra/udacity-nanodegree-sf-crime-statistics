@@ -12,5 +12,7 @@ CPU - 2.2 GHz
 
 ## Tuning
 
-1. Kafka Topic Partiotion same as numner of CPU core: In a Spark Streaming job, Kafka partitions map 1:1 with Spark partitions. So to increase Parallelism, Kafka topic is created with 12 partition. It creats 12 Spark executor daemons and can be monitored in htop utility.
-2. 
+1. Kafka Topic Partiotion same as numner of CPU core: In a Spark Streaming job, Kafka partitions map 1:1 with Spark partitions. So to increase Parallelism, Kafka topic is created with 12 partition. It creats 12 Spark executor daemons and can be monitored in *htop* utility.
+2. Spark master property: master(local(\*)). This will use 12 core available in CPU.
+3. Spark config property: config("*spark.sql.shuffle.partitions*", 4). This parameter gave the optimal throuput of ~2500 processedRowsPerSecond.
+4. Spark Streaming Properties: option("maxOffsetsPerTrigger", 8000). By setting this parameter, could process microbatch of 8000 at ~2500 processedRowsPerSecond.
