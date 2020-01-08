@@ -6,8 +6,8 @@ This document outlines the Spark streaming config parameters used for optimizing
 To develope a real-time data pipeline for analytical and data exploration of SF police department crime data. Data is ingested from a JSON file and real-time events emited from Kafka producer and consumer streaming pipeline built using pyspark Spark structured streaming python library. 
 
 ## Resorce configuration
-Number of cores - 12
-Memory - 16 GB
+Number of cores - 12,
+Memory - 16 GB,
 CPU - 2.2 GHz
 
 ## Tuning
